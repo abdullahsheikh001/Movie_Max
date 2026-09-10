@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:movie_max/Homescreen.dart';
+import 'package:movie_max/Onboardingscreen.dart';
 
 void main() {
   runApp(movie_max());
@@ -21,7 +21,7 @@ class movie_max extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
-        home: Homescreen(),
+        home: Onboardingscreen(),
       ),
     );
   }
