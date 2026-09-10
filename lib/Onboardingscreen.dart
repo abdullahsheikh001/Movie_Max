@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
+import 'package:movie_max/Login_screen.dart';
 
 class Onboardingscreen extends StatefulWidget {
   const Onboardingscreen({super.key});
@@ -21,7 +22,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                   image: const AssetImage("asset/images/background_image.png"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.8),
+                    Colors.black.withValues(alpha: 0.9),
                     BlendMode.darken,
                   ),
                 ),
@@ -29,17 +30,12 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             ),
           ),
           Positioned(
-            top: 200.h,
+            top: 300.h,
             left: 0,
             right: 0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  "asset/images/movie_max_logo.png",
-                  width: 140.w,
-                  height: 140.h,
-                ),
                 SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -56,14 +52,14 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                     Text(
                       "Max",
                       style: TextStyle(
-                        fontSize: 27.sp,
+                        fontSize: 30.sp,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple,
+                        color: Colors.red.shade900,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 10.h),
+                SizedBox(height: 20.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
 
@@ -77,15 +73,19 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             ),
           ),
           Positioned(
-            bottom: 100.h,
+            top: 450.h,
             left: 60.w,
             right: 60.w,
             child: ElevatedButton(
               onPressed: () {
-                // Navigate to the next screen or perform any action
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Login_screen()),
+                  (route) => false,
+                );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
+                backgroundColor: Colors.red.shade900,
                 padding: EdgeInsets.symmetric(vertical: 15.h),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.r),

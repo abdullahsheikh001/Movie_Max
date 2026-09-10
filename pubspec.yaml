@@ -27,11 +27,11 @@ flutter:
     - asset/images/
 
 flutter_native_splash:
-  color: "#6C2BD9"
+  color: "#000000"
   image: asset/images/movie_max_logo.png
 
   android_12:
-    color: "#6C2BD9"
+    color: "#000000"
     image: asset/images/movie_max_logo.png
 
   
