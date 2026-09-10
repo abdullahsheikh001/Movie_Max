@@ -78,10 +78,9 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             right: 60.w,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushAndRemoveUntil(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Login_screen()),
-                  (route) => false,
                 );
               },
               style: ElevatedButton.styleFrom(
