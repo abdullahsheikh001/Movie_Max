@@ -23,20 +23,23 @@ class _Login_screenState extends State<Login_screen> {
             // Back button at top-left
             Row(
               children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Container(
-                    width: 40.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Icon(
-                      Icons.arrow_back_ios_new,
-                      color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Container(
+                      width: 40.w,
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -44,10 +47,12 @@ class _Login_screenState extends State<Login_screen> {
             ),
 
             // Login artwork
-            SizedBox(
-              width: 500.w,
-              height: 200.h,
-              child: Image.asset("asset/images/login page art.png"),
+            Center(
+              child: SizedBox(
+                width: 300.w,
+                height: 150.h,
+                child: Image.asset("asset/images/login page art.png"),
+              ),
             ),
 
             SizedBox(height: 20.h),
