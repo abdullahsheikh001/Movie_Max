@@ -28,10 +28,10 @@ flutter:
 
 flutter_native_splash:
   color: "#6C2BD9"
-  image: asset/images/splash_logo.png
+  image: asset/images/movie_max_logo.png
 
   android_12:
     color: "#6C2BD9"
-    image: asset/images/logo.jpg
+    image: asset/images/movie_max_logo.png
 
-  fullscreen: true
+  
