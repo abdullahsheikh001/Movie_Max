@@ -28,6 +28,27 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
           ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "asset/images/movie_max_logo.png",
+                  width: 200.w,
+                  height: 200.h,
+                ),
+                SizedBox(height: 20.h),
+                Text(
+                  "Welcome to Movie Max",
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
