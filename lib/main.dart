@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:movie_max/Onboardingscreen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class movie_max extends StatelessWidget {
       splitScreenMode: true,
 
       autoRebuild: false,
-      child: MaterialApp(
+      child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
         home: Onboardingscreen(),
