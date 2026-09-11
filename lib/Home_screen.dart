@@ -10,6 +10,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _selectIndex = 0;
+
+  final List<String> tabs = [
+    "Featured",
+    "Trending",
+    "TV Shows",
+    "Movies",
+    "Genres",
+    "Top Rated",
+    "New Releases",
+    "Downloads",
+    "My List",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +57,57 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            SizedBox(height: 10.h),
+
+            SizedBox(
+              height: 40.h,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () => setState(() => _selectIndex = index),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.w),
+                    child: Center(
+                      child: Text(
+                        tabs[index],
+                        style: TextStyle(
+                          color: _selectIndex == index
+                              ? Colors.red.shade900
+                              : Colors.white,
+                          fontSize: 14.sp,
+                          fontWeight: _selectIndex == index
+                              ? FontWeight.bold
+                              : FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                separatorBuilder: (context, index) => SizedBox(width: 10.w),
+                itemCount: tabs.length,
+              ),
+            ),
+
+            SizedBox(height: 10.h),
+
+            Align(
+              alignment: AlignmentGeometry.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  "TRENDING NOW",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+
+            
           ],
+
         ),
       ),
     );
