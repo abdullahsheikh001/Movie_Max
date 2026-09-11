@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:movie_max/Home_screen.dart';
-import 'package:movie_max/Onboardingscreen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
