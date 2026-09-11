@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:movie_max/Signin_screen.dart';
-import 'package:movie_max/Signup_screen.dart';
 
 // ignore: camel_case_types
 class Login_screen extends StatefulWidget {
@@ -60,7 +59,7 @@ class _Login_screenState extends State<Login_screen> {
 
             // Heading
             Text(
-              "Lets Get You Started",
+              "Welcome Back!",
               style: TextStyle(
                 fontSize: 25.sp,
                 fontWeight: FontWeight.bold,
@@ -194,23 +193,12 @@ class _Login_screenState extends State<Login_screen> {
                   onPressed: () {
                     // Handle sign-up logic here
                   },
-                  child: InkWell(
-                    onTap: () {
-                      // Navigate to the sign-up screen
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignupScreen(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Colors.red.shade900,
-                        decoration: TextDecoration.underline,
-                      ),
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      color: Colors.red.shade900,
+                      decoration: TextDecoration.underline,
                     ),
                   ),
                 ),

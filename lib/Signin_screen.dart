@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:movie_max/Signup_screen.dart';
+import 'package:movie_max/Home_screen.dart';
+import 'package:movie_max/Onboardingscreen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
@@ -37,20 +38,23 @@ class _SigninScreenState extends State<SigninScreen> {
               // Back Button Row
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Container(
-                      width: 40.w,
-                      height: 40.h,
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.2),
-                        shape: BoxShape.circle,
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios_new,
-                        color: Colors.white,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Container(
+                        width: 40.w,
+                        height: 40.h,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.arrow_back_ios_new,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -70,7 +74,7 @@ class _SigninScreenState extends State<SigninScreen> {
 
               // Title
               Text(
-                "Create Your Account",
+                "Welcome Back!",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 24.sp,
@@ -184,7 +188,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignupScreen(),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     }
@@ -202,6 +206,66 @@ class _SigninScreenState extends State<SigninScreen> {
                   ),
                   child: Text("Sign In ", style: TextStyle(fontSize: 16.sp)),
                 ),
+              ),
+
+              SizedBox(height: 30.h),
+
+              Text(
+                "or continue with ",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 30.h),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      // Handle Google sign-in logic here
+                    },
+                    icon: Image.asset(
+                      "asset/images/google.png",
+                      width: 35.w,
+                      height: 35.h,
+                    ),
+                  ),
+                  SizedBox(width: 30.w),
+
+                  IconButton(
+                    onPressed: () {
+                      // Handle Facebook sign-in logic here
+                    },
+                    icon: Image.asset(
+                      "asset/images/facebook.png",
+                      width: 35.w,
+                      height: 35.h,
+                    ),
+                  ),
+                  SizedBox(width: 30.w),
+
+                  IconButton(
+                    onPressed: () {
+                      // Handle Apple sign-in logic here
+                    },
+                    icon: Image.asset(
+                      "asset/images/apple.png",
+                      width: 35.w,
+                      height: 35.h,
+                    ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 30.h),
+
+              Text(
+                "Privacy Policy | Terms of Service",
+                style: TextStyle(fontSize: 14.sp, color: Colors.white),
               ),
             ],
           ),
